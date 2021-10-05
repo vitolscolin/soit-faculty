@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Faculty List</title>
+</head>
+<body>
+	<h4>School of IT Faculty Directory</h4>
+	<hr>
+	<table border=1>
+		<thead>
+			<tr>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Email</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="theFaculties : ${faculties}">
+				<td th:text="${theFaculties.firstName}">
+				<td th:text="${theFaculties.lastName}">
+				<td th:text="${theFaculties.email}">
+		</tbody>
+	</table>
+</body>
+</html>
