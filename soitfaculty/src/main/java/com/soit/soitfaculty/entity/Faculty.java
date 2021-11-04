@@ -26,6 +26,9 @@ public class Faculty {
 	@Column(name="email")
 	private String email;
 	
+	@Column(name="Title")
+	private String title;
+	
 	//set Constructors
 	public Faculty() {
 		
@@ -35,12 +38,25 @@ public class Faculty {
 	}
 
 
-	public Faculty(int id, String firstName, String lastName, String email) {
+	public Faculty(int id, String firstName, String lastName, String email, String title) {
+		super();
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
+		this.title = title;
 	}
+
+
+	public String getTitle() {
+		return title;
+	}
+
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
 
 	//getters and setters
 	public int getId() {
@@ -85,7 +101,10 @@ public class Faculty {
 
 	@Override
 	public String toString() {
-		return "Faculty [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + "]";
+		return "Faculty [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
+				+ ", title=" + title + ", getTitle()=" + getTitle() + ", getId()=" + getId() + ", getFirstName()="
+				+ getFirstName() + ", getLastName()=" + getLastName() + ", getEmail()=" + getEmail() + ", getClass()="
+				+ getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
 	}
 	
 	
